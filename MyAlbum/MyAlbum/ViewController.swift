@@ -26,16 +26,14 @@ class ViewController: UIViewController {
     }
    
     
-    @IBAction func challenge(_ sender: Any) {
-        let alert = UIAlertController(title: "도전", message: "아이폰 도전", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
 }
 
  
   
+
+//view 기준점 - 디바이스 좌측상단(0,0)
+
+//button -> view controller
+//앱은 오브젝트로 구성
+//오브젝트끼리 서로 메세지를 보냄
+//앱은 이벤트에 의해 프로세스 동작함
