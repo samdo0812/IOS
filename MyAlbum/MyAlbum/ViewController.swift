@@ -20,10 +20,22 @@ class ViewController: UIViewController {
         
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         
+        
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+   
     
+    @IBAction func challenge(_ sender: Any) {
+        let alert = UIAlertController(title: "도전", message: "아이폰 도전", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
  
+  
