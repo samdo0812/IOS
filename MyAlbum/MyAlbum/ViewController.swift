@@ -16,19 +16,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        priceLabel.text = "$ \(currentValue)"
+        refresh()
     }
 
-    @IBAction func hello(_ sender: Any) {
-        let message = "가격은 $\(currentValue) 입니다"
-        let alert = UIAlertController(title: "Hello", message: message, preferredStyle: .alert)
-         
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-        
+    @IBAction func showAlert(_ sender: Any) {
+    let message = "가격은 $\(currentValue) 입니다"
+           let alert = UIAlertController(title: "Hello", message: message, preferredStyle: .alert)
+           let action = UIAlertAction(title: "Ok", style: .default, handler: {action in self.refresh()})
+           
+           alert.addAction(action)
+           present(alert, animated: true, completion: nil)
+       
+    }
+    
+    func refresh() {
         let ranmdomPrice = arc4random_uniform(10000) + 1
         currentValue = Int(ranmdomPrice)
         priceLabel.text = "$ \(currentValue)"
