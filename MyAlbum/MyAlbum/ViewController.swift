@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         currentValue = Int(ranmdomPrice)
         priceLabel.text = "$ \(currentValue)"
     }
-}
+} 
 
  
   
